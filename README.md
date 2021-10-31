@@ -22,6 +22,7 @@ A ViniOrder-API é uma API Rest criada para fins acadêmicos e consultas posteri
 
 <ul>
   <li><a href="#funcionalidades-da-api">Funcionalidades da API</a></li>
+  <li><a href="#tecnologias-da-api">Tecnologias utilizadas</a></li>
   <li><a href="#mínimo-para-rodar">Mínimo para rodar</a></li>
   <li><a href="#mysql-ou-mariadb">Configurando banco de dados</a></li>
   <li><a href="#como-rodar-a-api">Como rodar a API?</a></li>
@@ -43,14 +44,24 @@ A ViniOrder-API é uma API Rest criada para fins acadêmicos e consultas posteri
 
 ---
 
+## Tecnologias da API
+- Java 17
+- Flyway (Migração de dados)
+- Springboot Stack Web (2.5.6)
+- Swagger (Documentação da API)
+- AWS RDS (MariaDB)
+- Heroku Cloud (Deploy da API)
+
+
+---
+
 ## Mínimo para rodar
 
 Para rodar o projeto, existem alguns requisítos mínimos de configurações, são eles:
 
-- Java 17 **(Obrigatório)**
-- MariaDB Server 10.5+ **(Obrigatório se não for rodar via docker)**
-- Eclipse, STS ou qualquer IDE de sua preferência **(Obrigatório)**
-- Docker **(Obrigatório se for rodar via script)
+- Java 17
+- MariaDB Server 10.5+
+- Eclipse, STS ou qualquer IDE de sua preferência
 
 ---
 
@@ -62,7 +73,8 @@ Um setup inicial válido para uma base nova pode seguir os padrões abaixo:
 
 - URL de conexão da base `spring.datasource.url=jdbc:mariadb://[SERVIDOR]:[PORTA]/[BASE]?user=[NOME_USUARIO]&password=[SENHA]&createDatabaseIfNotExist=TRUE`, o `createDatabaseIfNotExist=TRUE` faz com que o próprio framework crie a base de dados.
 
-- No meu caso, a primeira linha do meu `application-dev.properties` fica `spring.datasource.url=jdbc:mariadb://localhost:3306/devdb?user=admin&password=123456dv&createDatabaseIfNotExist=TRUE`
+- No meu caso, a primeira linha do meu `application.properties` fica `spring.datasource.url=jdbc:mariadb://localhost:3306/devdb?user=admin&password=admin`
+- Também é possível utilizar variável de ambiente para configurar a base, basta fazer um export em `DB_CONFIG` passando a string de conexão. ex.: `EXPORT DB_CONFIG=jdbc:mariadb://localhost:3306/devdb?user=admin&password=admin`.
 
 ---
 
