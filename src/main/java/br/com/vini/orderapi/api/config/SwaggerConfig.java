@@ -58,7 +58,7 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfo("Vini API",
-                "Este é o catálogo de serviços RESTFUL de Vinícios Rodrigues, para saber mais sobre acesse: [Vini Order - API](https://vini-order-api.herokuapp.com/swagger-ui.html).",
+                "Este é o catálogo de serviços RESTFUL de Vinícios Rodrigues, para saber mais sobre acesse: [Vini Order - API](https://github.com/viniciosarodrigues/vini-order.git).",
                 "STORE-REST", "#", null, "Licensa da API", "#", Collections.emptyList());
     }
 
