@@ -22,7 +22,7 @@ import io.swagger.annotations.ApiParam;
 @RequestMapping(value = "/category")
 public class FiscalCategoryController extends BaseController<FiscalCategoryService> {
 
-    @ApiOperation(value = "Busca paginada")
+    @ApiOperation(value = "Busca paginada", nickname = "find-page-category")
     @GetMapping
     public ResponseEntity<Page<FiscalCategoryProtocol>> findPage(@ApiParam(value = "Filtros de busca e paginação") FiscalCategoryFilter filters) {
         Pageable pageSettings = PageRequest.of(filters.getPage(), filters.getSize(), Direction.valueOf(filters.getDirection()),
@@ -30,7 +30,7 @@ public class FiscalCategoryController extends BaseController<FiscalCategoryServi
         return ResponseEntity.ok(service.getPage(pageSettings, filters));
     }
 
-    @ApiOperation(value = "Busca por identificador")
+    @ApiOperation(value = "Busca por identificador", nickname = "find-by-id-category")
     @GetMapping("/{id}")
     public ResponseEntity<FiscalCategoryProtocol> findById(@PathVariable("id") Long id) {
         return ResponseEntity.ok(service.findById(id));

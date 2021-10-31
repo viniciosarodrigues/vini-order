@@ -22,7 +22,7 @@ import io.swagger.annotations.ApiParam;
 @RequestMapping(value = "/product")
 public class ProductController extends BaseController<ProductService> {
 
-    @ApiOperation(value = "Busca paginada")
+    @ApiOperation(value = "Busca paginada", nickname = "find-page-product")
     @GetMapping
     public ResponseEntity<Page<ProductProtocol>> findPage(@ApiParam(value = "Filtros de busca e paginação") ProductFilter filters) {
         Pageable pageSettings = PageRequest.of(filters.getPage(), filters.getSize(), Direction.valueOf(filters.getDirection()),
@@ -30,7 +30,7 @@ public class ProductController extends BaseController<ProductService> {
         return ResponseEntity.ok(service.getPage(pageSettings, filters));
     }
 
-    @ApiOperation(value = "Busca por identificador")
+    @ApiOperation(value = "Busca por identificador", nickname = "find-by-id-product")
     @GetMapping("/{id}")
     public ResponseEntity<ProductProtocol> findById(@PathVariable("id") Long id) {
         return ResponseEntity.ok(service.findById(id));

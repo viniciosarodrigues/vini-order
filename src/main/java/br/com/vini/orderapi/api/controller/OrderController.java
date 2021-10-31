@@ -19,7 +19,7 @@ import io.swagger.annotations.ApiParam;
 @RequestMapping(value = "/order")
 public class OrderController extends BaseController<OrderService> {
 
-    @ApiOperation(value = "Simula venda")
+    @ApiOperation(value = "Simula venda", nickname = "simulate-order")
     @PutMapping
     public ResponseEntity<ResultOrderIntegrationProtocol> simulate(@RequestBody @Validated @ApiParam(name = "JSON de requisição para simulação de venda", value = "Operação de simulação de venda. Retorna um objeto pronto para a integração de venda", required = true) OrderIntegrationSimulationProtocol request) {
         return ResponseEntity.ok(service.simulate(request));
