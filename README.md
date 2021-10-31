@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://vini-order-api.herokuapp.com">
+  <a href="https://vini-order-api.herokuapp.com/swagger-ui.html">
     <img alt="Vini Order" src="./readme/logo.png" width="350px" />
   </a>
 </h1>
@@ -7,7 +7,7 @@
   Vini-Order - API
 </h2>
 
-A ViniOrder-API é uma API Rest criada para fins acadêmicos e consultas posteriores. A API possui um cliente feito em Angular 12 o [ViniOrder-UI](https://github.com/viniciosarodrigues/vini-order-ui).
+A ViniOrder-API é uma API Rest criada para fins acadêmicos e consultas posteriores. A API possui um Swagger disponibilizado na [Heroku](https://vini-order-api.herokuapp.com/swagger-ui.html).
 
 <p align="center">
     <a href="https://github.com/niv-labs/">
