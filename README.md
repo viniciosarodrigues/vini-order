@@ -51,6 +51,7 @@ A ViniOrder-API é uma API Rest criada para fins acadêmicos e consultas posteri
 - Swagger (Documentação da API)
 - AWS RDS (MariaDB)
 - Heroku Cloud (Deploy da API)
+- SL4J (Logs)
 
 
 ---
@@ -95,6 +96,78 @@ Um setup inicial válido para uma base nova pode seguir os padrões abaixo:
 
 #### Dica
 Se você estiver usando o Eclipse, pode ser uma boa ideia baixar o plugin disponibilizado pela Pitoval no marketplace, o `Spring Tools 4 (release)`
+
+### Consumindo a API
+A API disponibiliza de uma interface REST para consumo dos endpoints. Foi adicionado um Swagger para facilitar o mesmo.
+
+#### Heroku
+Atualmente existe uma instância do Heroku rodando a API em uma rede pública para consumo externo disponível [aqui](https://vini-order-api.herokuapp.com/swagger-ui.html). É possível consumir a API diretamente por lá, você também pode utilizar qualquer client HTTP para consumo de APIs como o famoso Postman e o cURL.
+
+#### Simulando pedido no endpoint PUT - /order
+
+```
+{
+   "items":[
+      {
+         "product":{
+            "id":8,
+            "unitValue":47.5,
+            "description":"Perfume Francês (importado)",
+            "category":{
+               "id":12,
+               "description":"PERFUME IMPORTADO",
+               "taxes":[
+                  {
+                     "id":1,
+                     "name":"TAXA BASE",
+                     "percentual":10
+                  },
+                  {
+                     "id":2,
+                     "name":"TAXA DE IMPORTACAO",
+                     "percentual":5
+                  }
+               ]
+            }
+         },
+         "quantity":10
+      },
+      {
+         "product":{
+            "id":1,
+            "unitValue":2.29,
+            "description":"Pìpos Vitaminado",
+            "category":{
+               "id":1,
+               "description":"COMIDA",
+               "taxes":[]
+            }
+         },
+         "quantity":10
+      },
+      {
+         "product":{
+            "id":7,
+            "unitValue":10,
+            "description":"Chocolate Belga (importado)",
+            "category":{
+               "id":4,
+               "description":"COMIDA IMPORTADO",
+               "taxes":[
+                  {
+                     "id":2,
+                     "name":"TAXA DE IMPORTACAO",
+                     "percentual":5
+                  }
+               ]
+            }
+         },
+         "quantity":2
+      }
+   ]
+}
+```
+
 
 ---
 
@@ -152,7 +225,9 @@ Esta área especifica definições técnicas da aplicação, suas característic
 
 > Você pode me encontrar por aqui...
 
-- Vinícios Rodrigues :: [viniciosarodrigues@gmail.com](viniciosarodrigues@gmail.com)
+- [Email](viniciosarodrigues@gmail.com)
+- [Linkedin](https://www.linkedin.com/in/viniciosrodrigues/)
+- [GitHub](https://github.com/viniciosarodrigues)
 
 ---
 
