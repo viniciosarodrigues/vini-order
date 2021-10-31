@@ -116,10 +116,23 @@ Depois que seu Pull Request é aceito e o merge é realizado, você pode deletar
 
 ---
 
-## Arquitetura (Em desenvolvimento...)
+## Arquitetura
 Esta área especifica definições técnicas da aplicação, suas características e comportamentos.
+### Diagrama de componentes
+
+<h1 align="center">
+  <a href="https://vini-order-api.herokuapp.com/swagger-ui.html">
+    <img alt="Vini Order" src="./readme/img/diagrama.png" width="auto" />
+  </a>
+</h1>
+
 ### Modelagem de dados
-Em breve...
+
+<h1 align="center">
+  <a href="https://vini-order-api.herokuapp.com/swagger-ui.html">
+    <img alt="Vini Order" src="./readme/img/base.png" width="auto" />
+  </a>
+</h1>
 
 ---
 
