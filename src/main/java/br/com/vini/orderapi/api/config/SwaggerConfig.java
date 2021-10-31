@@ -59,7 +59,7 @@ public class SwaggerConfig {
     private ApiInfo apiInfo() {
         return new ApiInfo("Vini API",
                 "Este é o catálogo de serviços RESTFUL de Vinícios Rodrigues, para saber mais sobre acesse: [Vini Order - API](https://github.com/viniciosarodrigues/vini-order.git).",
-                "STORE-REST", "#", null, "Licensa da API", "#", Collections.emptyList());
+                "STORE-REST", "#", null, "Licença da API", "https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt", Collections.emptyList());
     }
 
 }
