@@ -11,7 +11,7 @@ A ViniOrder-API é uma API Rest criada para fins acadêmicos e consultas posteri
 
 <p align="center">
     <a href="https://github.com/niv-labs/">
-        <img alt="Made by NiV Labs" src="https://img.shields.io/badge/made%20by-NiV%20Labs-brightgreen" />
+        <img alt="Made by NiV Labs" src="https://img.shields.io/badge/made%20by-Vinicios%20Rodrigues-brightgreen" />
     </a>
     <img alt="License" src="https://img.shields.io/badge/license-MIT-%2304D361" />
 </p>
@@ -225,7 +225,7 @@ Esta área especifica definições técnicas da aplicação, suas característic
 
 > Você pode me encontrar por aqui...
 
-- [Email](viniciosarodrigues@gmail.com)
+- [Email](mailto:viniciosarodrigues@gmail.com)
 - [Linkedin](https://www.linkedin.com/in/viniciosrodrigues/)
 - [GitHub](https://github.com/viniciosarodrigues)
 
