@@ -7,7 +7,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import io.swagger.annotations.Api;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.builders.ResponseMessageBuilder;
@@ -50,7 +49,7 @@ public class SwaggerConfig {
                 .globalResponseMessage(RequestMethod.PUT, Arrays.asList(m204put, m400, m401, m403, m404, m409, m422, m500))
                 .globalResponseMessage(RequestMethod.DELETE, Arrays.asList(m204del, m400, m401, m403, m404, m409, m500))
                 .select()
-                .apis(RequestHandlerSelectors.withClassAnnotation(Api.class))
+                .apis(RequestHandlerSelectors.basePackage("br.com.vini.orderapi.api.controller"))
                 .paths(PathSelectors.any())
                 .build()
                 .useDefaultResponseMessages(false)
