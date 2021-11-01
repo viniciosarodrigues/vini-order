@@ -30,9 +30,9 @@ public class ProductController extends BaseController<ProductService> {
         return ResponseEntity.ok(service.getPage(pageSettings, filters));
     }
 
-    @ApiOperation(value = "Busca por identificador", nickname = "find-by-id-product")
-    @GetMapping("/{id}")
-    public ResponseEntity<ProductProtocol> findById(@PathVariable("id") @ApiParam(name = "Identificador único do produto", value = "Operação de consulta detalhada de informações de produto à partir do identificador único do mesmo", required = true) Long id) {
+    @ApiOperation(value = "Busca por identificador", nickname = "find-by-id-product", notes = "Realiza a busca de informações detalhadas de um produto por identificador único do mesmo")
+    @GetMapping(path = "/{id}")
+    public ResponseEntity<ProductProtocol> findById(@PathVariable("id") Long id) {
         return ResponseEntity.ok(service.findById(id));
     }
 

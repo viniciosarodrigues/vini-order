@@ -30,9 +30,9 @@ public class FiscalCategoryController extends BaseController<FiscalCategoryServi
         return ResponseEntity.ok(service.getPage(pageSettings, filters));
     }
 
-    @ApiOperation(value = "Busca por identificador", nickname = "find-by-id-category")
+    @ApiOperation(value = "Busca por identificador", nickname = "find-by-id-category", notes = "Realiza a busca de informações detalhadas de uma categoria por identificador único da mesma")
     @GetMapping("/{id}")
-    public ResponseEntity<FiscalCategoryProtocol> findById(@PathVariable("id") @ApiParam(name = "Identificador único da categoria", value = "Operação de consulta detalhada de informações de categoria à partir do identificador único da mesma", required = true, defaultValue = "0") Long id) {
+    public ResponseEntity<FiscalCategoryProtocol> findById(@PathVariable("id") Long id) {
         return ResponseEntity.ok(service.findById(id));
     }
 
