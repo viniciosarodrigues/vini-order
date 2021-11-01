@@ -219,6 +219,14 @@ Esta área especifica definições técnicas da aplicação, suas característic
   </a>
 </h1>
 
+### Fluxograma da simulação do pedido
+
+<h1 align="center">
+  <a href="https://vini-order-api.herokuapp.com/swagger-ui.html">
+    <img alt="Vini Order" src="./readme/img/fluxo.png" width="auto" />
+  </a>
+</h1>
+
 ---
 
 ## Contato
