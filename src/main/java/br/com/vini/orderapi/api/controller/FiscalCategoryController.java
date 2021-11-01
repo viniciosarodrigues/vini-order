@@ -15,7 +15,6 @@ import br.com.vini.orderapi.api.service.fiscalcategory.protocol.FiscalCategoryPr
 import br.com.vini.orderapi.api.service.fiscalcategory.repositories.custom.FiscalCategoryFilter;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
 
 @Api(tags = {"Categoria (Fiscal)"})
 @RestController
@@ -24,7 +23,7 @@ public class FiscalCategoryController extends BaseController<FiscalCategoryServi
 
     @ApiOperation(value = "Busca paginada", nickname = "find-page-category")
     @GetMapping
-    public ResponseEntity<Page<FiscalCategoryProtocol>> findPage(@ApiParam(value = "Filtros de busca e paginação") FiscalCategoryFilter filters) {
+    public ResponseEntity<Page<FiscalCategoryProtocol>> findPage(FiscalCategoryFilter filters) {
         Pageable pageSettings = PageRequest.of(filters.getPage(), filters.getSize(), Direction.valueOf(filters.getDirection()),
                                                filters.getOrderBy());
         return ResponseEntity.ok(service.getPage(pageSettings, filters));
