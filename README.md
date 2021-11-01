@@ -103,7 +103,7 @@ A API disponibiliza de uma interface REST para consumo dos endpoints. Foi adicio
 #### Heroku
 Atualmente existe uma instância do Heroku rodando a API em uma rede pública para consumo externo disponível [aqui](https://vini-order-api.herokuapp.com/swagger-ui.html). É possível consumir a API diretamente por lá, você também pode utilizar qualquer client HTTP para consumo de APIs como o famoso Postman e o cURL.
 
-#### Simulando pedido no endpoint PUT - /order
+#### Simulando pedido no endpoint POST - /order
 
 ```
 {

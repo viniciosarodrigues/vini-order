@@ -23,6 +23,16 @@ public class FiscalItemProtocol implements BaseProtocol {
     @NotNull
     private BigDecimal quantity;
 
+    public FiscalItemProtocol() {
+        super();
+    }
+
+    public FiscalItemProtocol(@NotNull @Valid ProductProtocol product, @NotNull BigDecimal quantity) {
+        super();
+        this.product = product;
+        this.quantity = quantity;
+    }
+
     public ProductProtocol getProduct() {
         return product;
     }

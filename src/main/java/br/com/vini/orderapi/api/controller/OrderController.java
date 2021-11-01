@@ -2,7 +2,7 @@ package br.com.vini.orderapi.api.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,7 +20,7 @@ import io.swagger.annotations.ApiParam;
 public class OrderController extends BaseController<OrderService> {
 
     @ApiOperation(value = "Simula venda", nickname = "simulate-order")
-    @PutMapping
+    @PostMapping
     public ResponseEntity<ResultOrderIntegrationProtocol> simulate(@RequestBody @Validated @ApiParam(name = "JSON de requisição para simulação de venda", value = "Operação de simulação de venda. Retorna um objeto pronto para a integração de venda", required = true) OrderIntegrationSimulationProtocol request) {
         return ResponseEntity.ok(service.simulate(request));
     }
