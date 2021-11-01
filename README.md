@@ -52,6 +52,7 @@ A ViniOrder-API é uma API Rest criada para fins acadêmicos e consultas posteri
 - AWS RDS (MariaDB)
 - Heroku Cloud (Deploy da API)
 - SL4J (Logs)
+- JUnit 5 (Testes unitários)
 
 
 ---
